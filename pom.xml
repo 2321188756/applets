@@ -13,18 +13,17 @@
     <artifactId>applets</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>applets</name>
-    <description>Applets of springboot</description>
-    <packaging>pom</packaging> <!-- package method 'jar''war''pom' -->
-
+    <description>applets</description>
+    <packaging>pom</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <modules>
-        <module>entity</module>
-        <module>dao</module>
-        <module>service</module>
-        <module>web</module>
+        <module>applets-entity</module>
+        <module>applets-dao</module>
+        <module>applets-service</module>
+        <module>applets-web</module>
     </modules>
 
     <dependencies>
@@ -39,6 +38,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -52,4 +52,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

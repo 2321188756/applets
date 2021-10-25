@@ -1,9 +1,9 @@
 FROM java:8
 
-ADD target/*.jar app.jar
-
 VOLUME /tmp
 
-EXPOSE 80
+ADD web/target/*.jar app.jar
 
-ENTRYPOINT ["java","-jar","app.jar"]
+EXPOSE 8080
+
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
