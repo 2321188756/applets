@@ -2,7 +2,7 @@ FROM java:8
 
 VOLUME /tmp
 
-ADD web/target/*.jar app.jar
+ADD applets-web/target/*.jar app.jar
 
 EXPOSE 8080
 
