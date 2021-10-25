@@ -6,7 +6,7 @@ appname=applets                   #容器名称
 port=8080                         #docker暴露端口
 
 #  mvn打包镜像
-docker run --rm --name springboot-test -v /root/.m2:/root/.m2 -v "$PWD":/usr/src/maven -w /usr/src/maven maven mvn clean install
+docker run --rm --name springboot-applets -v /root/.m2:/root/.m2 -v "$PWD":/usr/src/maven -w /usr/src/maven maven mvn clean install
 echo "镜像打包完成"
 # 获得docker容器 id和镜像 id
 r_c=`docker ps -a | grep "$appname" | awk '{print $1 }'`
