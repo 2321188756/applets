@@ -15,15 +15,75 @@
     <name>applets</name>
     <description>applets</description>
     <packaging>pom</packaging>
+
     <properties>
         <java.version>1.8</java.version>
+        <project.version>0.0.1-SNAPSHOT</project.version>
+        <druid.version>1.1.10</druid.version>
+        <mybatis.version>2.2.0</mybatis.version>
+        <swaggeer.version>2.9.2</swaggeer.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.acg</groupId>
+                <artifactId>applets-dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.acg</groupId>
+                <artifactId>applets-entity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.acg</groupId>
+                <artifactId>applets-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.acg</groupId>
+                <artifactId>applets-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.acg</groupId>
+                <artifactId>applets-swagger</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- 架包版本管理 -->
+            <!-- druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <!-- swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swaggeer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swaggeer.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <modules>
         <module>applets-entity</module>
         <module>applets-dao</module>
         <module>applets-service</module>
         <module>applets-web</module>
+        <module>applets-swagger</module>
     </modules>
 
     <dependencies>
