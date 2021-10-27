@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 80
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -7,3 +7,6 @@ spring:
     password: wh990119
     url: jdbc:mysql://42.193.20.105:3306/acg?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml  #全局扫描mapper包
+  type-aliases-package: com.acg.entity

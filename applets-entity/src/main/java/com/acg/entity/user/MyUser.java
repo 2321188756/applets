@@ -3,23 +3,17 @@ package com.acg.entity.user;
 import java.io.Serializable;
 
 public class MyUser implements Serializable {
-    private String userName;
-
+    private String username;
     private String password;
-
-    private boolean accountNonExpired = true;
-
-    private boolean accountNonLocked= true;
-
-    private boolean credentialsNonExpired= true;
-
-    private boolean enabled= true;
-
+    private boolean accountNonExpired;
+    private boolean accountNonLocked;
+    private boolean credentialsNonExpired;
+    private boolean enabled;
     public MyUser() {
     }
 
-    public MyUser(String userName, String password, boolean accountNonExpired, boolean accountNonLocked, boolean credentialsNonExpired, boolean enabled) {
-        this.userName = userName;
+    public MyUser(String username, String password, boolean accountNonExpired, boolean accountNonLocked, boolean credentialsNonExpired, boolean enabled) {
+        this.username = username;
         this.password = password;
         this.accountNonExpired = accountNonExpired;
         this.accountNonLocked = accountNonLocked;
@@ -27,12 +21,12 @@ public class MyUser implements Serializable {
         this.enabled = enabled;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -77,8 +71,8 @@ public class MyUser implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
+        return "MyUser{" +
+                "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", accountNonExpired=" + accountNonExpired +
                 ", accountNonLocked=" + accountNonLocked +
